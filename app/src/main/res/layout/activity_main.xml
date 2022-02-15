@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/textview22"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Chronometer
+        android:id="@+id/kronometre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:text="00:00"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imagebasla"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageyenile"
+        app:srcCompat="@drawable/start" />
+
+    <ImageView
+        android:id="@+id/imageyenile"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imagebasla"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/restart" />
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_button3"
+        android:onClick="stop"
+        android:text="Stop"
+        android:visibility="invisible"
+        android:textColor="@color/red"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imagebasla"
+        app:layout_constraintEnd_toEndOf="@+id/imagebasla"
+        app:layout_constraintStart_toStartOf="@+id/imagebasla"
+        app:layout_constraintTop_toTopOf="@+id/imagebasla" />
+
+    <Button
+        android:id="@+id/start"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_button"
+        android:onClick="start"
+        android:text="Start"
+        android:textColor="@color/text_green"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imagebasla"
+        app:layout_constraintEnd_toEndOf="@+id/imagebasla"
+        app:layout_constraintStart_toStartOf="@+id/imagebasla"
+        app:layout_constraintTop_toTopOf="@+id/imagebasla" />
+
+    <Button
+        android:id="@+id/restart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_button2"
+        android:onClick="restart"
+        android:text="Restart"
+        android:textColor="@color/ligt_gray"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageyenile"
+        app:layout_constraintEnd_toEndOf="@+id/imageyenile"
+        app:layout_constraintStart_toStartOf="@+id/imageyenile"
+        app:layout_constraintTop_toTopOf="@+id/imageyenile" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
